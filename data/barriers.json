@@ -1,0 +1,119 @@
+[
+  {
+    "place_id": 1,
+    "barrier_type": "Blocked Ramp",
+    "description": "Construction material blocking ramp",
+    "confidence": "High",
+    "reported_by": "Test Runner",
+    "id": 1,
+    "reported_at": "2026-08-15T09:33:10.906875+00:00"
+  },
+  {
+    "place_id": 2,
+    "barrier_type": "Broken Lift",
+    "description": "Elevator out of service",
+    "confidence": "Medium",
+    "reported_by": "API Test",
+    "id": 2,
+    "reported_at": "2026-08-15T09:33:11.052864+00:00"
+  },
+  {
+    "place_id": 1,
+    "barrier_type": "Blocked Ramp",
+    "description": "Construction material blocking ramp",
+    "confidence": "High",
+    "reported_by": "Test Runner",
+    "id": 3,
+    "reported_at": "2026-08-15T09:34:07.265467+00:00"
+  },
+  {
+    "place_id": 2,
+    "barrier_type": "Broken Lift",
+    "description": "Elevator out of service",
+    "confidence": "Medium",
+    "reported_by": "API Test",
+    "id": 4,
+    "reported_at": "2026-08-15T09:34:07.337986+00:00"
+  },
+  {
+    "place_id": 1,
+    "barrier_type": "Blocked Ramp",
+    "description": "Construction material blocking ramp",
+    "confidence": "High",
+    "reported_by": "Test Runner",
+    "id": 5,
+    "reported_at": "2026-08-15T09:35:12.748027+00:00"
+  },
+  {
+    "place_id": 2,
+    "barrier_type": "Broken Lift",
+    "description": "Elevator out of service",
+    "confidence": "Medium",
+    "reported_by": "API Test",
+    "id": 6,
+    "reported_at": "2026-08-15T09:35:12.835113+00:00"
+  },
+  {
+    "place_id": 1,
+    "barrier_type": "Blocked Ramp",
+    "description": "Construction material blocking ramp",
+    "confidence": "High",
+    "reported_by": "Test Runner",
+    "id": 7,
+    "reported_at": "2026-08-15T09:37:28.682746+00:00"
+  },
+  {
+    "place_id": 2,
+    "barrier_type": "Broken Lift",
+    "description": "Elevator out of service",
+    "confidence": "Medium",
+    "reported_by": "API Test",
+    "id": 8,
+    "reported_at": "2026-08-15T09:37:28.741743+00:00"
+  },
+  {
+    "place_id": 1,
+    "barrier_type": "Blocked Ramp",
+    "description": "Construction material blocking ramp",
+    "confidence": "High",
+    "reported_by": "Test Runner",
+    "id": 9,
+    "reported_at": "2026-08-15T09:38:38.612990+00:00"
+  },
+  {
+    "place_id": 2,
+    "barrier_type": "Broken Lift",
+    "description": "Elevator out of service",
+    "confidence": "Medium",
+    "reported_by": "API Test",
+    "id": 10,
+    "reported_at": "2026-08-15T09:38:38.675248+00:00"
+  },
+  {
+    "place_id": 4,
+    "barrier_type": "Blocked Path",
+    "description": "Temporary construction blocking the accessible pathway.",
+    "confidence": "High",
+    "reported_by": "Demo User",
+    "id": 11,
+    "reported_at": "2026-08-15T09:47:23.376670+00:00"
+  },
+  {
+    "place_id": 1,
+    "barrier_type": "Blocked Ramp",
+    "description": "Construction material blocking ramp",
+    "confidence": "High",
+    "reported_by": "Test Runner",
+    "id": 12,
+    "reported_at": "2026-08-15T09:51:10.521698+00:00"
+  },
+  {
+    "place_id": 2,
+    "barrier_type": "Broken Lift",
+    "description": "Elevator out of service",
+    "confidence": "Medium",
+    "reported_by": "API Test",
+    "id": 13,
+    "reported_at": "2026-08-15T09:51:10.585687+00:00"
+  }
+]
