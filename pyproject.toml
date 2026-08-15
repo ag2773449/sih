@@ -1,0 +1,23 @@
+[project]
+name = "sih"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Abhinav Raj", email = "abhinavraj1904@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "pydantic>=2.13.4",
+    "requests>=2.34.2",
+    "streamlit>=1.61.1",
+    "uvicorn[standard]>=0.52.3",
+]
+
+[project.scripts]
+sih = "sih:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
