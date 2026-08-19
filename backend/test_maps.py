@@ -1,4 +1,4 @@
-from maps import geocode_place
+from backend.maps import geocode_place
 
 
 place = "Puri, India"

@@ -24,6 +24,10 @@ def save_barrier(report: Dict[str, Any]) -> Dict[str, Any]:
     report["id"] = len(items) + 1
     if "reported_at" not in report or not report["reported_at"]:
         report["reported_at"] = datetime.now(timezone.utc).isoformat()
+    if "status" not in report or not report["status"]:
+        report["status"] = "Under Verification"
+    if "updated" not in report or not report["updated"]:
+        report["updated"] = "Just now"
     items.append(report)
     _write(items)
     return report

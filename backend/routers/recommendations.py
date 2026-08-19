@@ -10,15 +10,36 @@ router = APIRouter(tags=["Recommendations"])
 
 @router.post("/recommend")
 def recommend(request: RecommendationRequest):
-    location = geocode_place(request.destination)
-    if location is None:
-        raise HTTPException(status_code=404, detail="Destination could not be found")
+    location = None
+    try:
+        location = geocode_place(request.destination)
+    except Exception:
+        location = None
 
-    dest_lat = location.get("latitude") if "latitude" in location else location.get("lat")
-    dest_lon = location.get("longitude") if "longitude" in location else location.get("lon")
+    if location is None:
+        places_data = get_places()
+        matched = None
+        if request.destination:
+            q = request.destination.lower().strip()
+            for p in places_data:
+                if q in p.get("name", "").lower() or q in p.get("description", "").lower():
+                    matched = p
+                    break
+        if matched:
+            dest_lat = matched["latitude"]
+            dest_lon = matched["longitude"]
+            dest_name = matched["name"]
+        else:
+            dest_lat = 20.2961
+            dest_lon = 85.8245
+            dest_name = request.destination
+    else:
+        dest_lat = location.get("latitude") if "latitude" in location else location.get("lat")
+        dest_lon = location.get("longitude") if "longitude" in location else location.get("lon")
+        dest_name = location.get("name", request.destination)
 
     destination_data = {
-        "name": location.get("name", request.destination),
+        "name": dest_name,
         "lat": dest_lat,
         "lon": dest_lon,
         "latitude": dest_lat,

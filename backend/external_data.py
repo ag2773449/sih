@@ -1,6 +1,6 @@
-from maps import geocode_place
-from weather import get_weather
-from route import get_route
+from backend.maps import geocode_place
+from backend.weather import get_weather
+from backend.route import get_route
 
 
 def get_destination_data(

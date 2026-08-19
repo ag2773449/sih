@@ -1,4 +1,4 @@
-from external_data import get_destination_data
+from backend.external_data import get_destination_data
 
 
 # Starting location

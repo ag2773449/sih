@@ -1,4 +1,4 @@
-from route import get_route
+from backend.route import get_route
 
 
 # Bhubaneswar

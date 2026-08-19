@@ -1,4 +1,4 @@
-from weather import get_weather
+from backend.weather import get_weather
 
 
 latitude = 19.8135
