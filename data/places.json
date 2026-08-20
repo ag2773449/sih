@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Accessible Museum",
-    "description": "Indoor museum with ramps, accessible toilet and low crowd level.",
+    "name": "Odisha State Museum",
+    "description": "Backend place record with ramps, accessible toilet data and low crowd level.",
     "latitude": 20.2644,
     "longitude": 85.8339,
     "wheelchair_accessible": true,
@@ -18,8 +18,8 @@
   },
   {
     "id": 2,
-    "name": "City Park",
-    "description": "Open public park with accessible entrance and moderate crowd.",
+    "name": "Biju Patnaik Park",
+    "description": "Backend place record for a public park with accessible entrance information.",
     "latitude": 20.2961,
     "longitude": 85.8245,
     "wheelchair_accessible": true,
@@ -35,8 +35,8 @@
   },
   {
     "id": 3,
-    "name": "Historic Temple Complex",
-    "description": "Popular heritage site with some stairs and higher crowd levels.",
+    "name": "Konark Sun Temple",
+    "description": "Backend place record for a heritage site with stairs and high crowd level noted.",
     "latitude": 19.8876,
     "longitude": 86.0945,
     "wheelchair_accessible": false,
@@ -52,8 +52,8 @@
   },
   {
     "id": 4,
-    "name": "Accessible Beach Viewpoint",
-    "description": "Scenic viewpoint with accessible entry and wheelchair-friendly pathway.",
+    "name": "Puri Beach Viewpoint",
+    "description": "Backend place record for a coastal viewpoint with wheelchair-friendly path information.",
     "latitude": 19.8135,
     "longitude": 85.8312,
     "wheelchair_accessible": true,
