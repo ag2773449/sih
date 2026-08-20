@@ -101,7 +101,7 @@ def filter_accessible_places(places, user_needs, preferences):
                 break
         if suitable:
             filtered.append(place)
-    return filtered
+    return filtered if filtered else list(places)
 
 
 def accessibility_score(place, needs, preferences):
