@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-scale: 1;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-paper text-ink-900 font-body antialiased;
+  font-size: calc(1rem * var(--text-scale));
+}
+
+/* ---------- Accessibility Settings modes ---------- */
+
+/* Larger text step applied app-wide */
+.a11y-text-large {
+  --text-scale: 1.15;
+}
+.a11y-text-xlarge {
+  --text-scale: 1.3;
+}
+
+/* High contrast mode: stronger borders, flatter surfaces, no soft shadows */
+.a11y-high-contrast {
+  --text-scale: var(--text-scale);
+}
+.a11y-high-contrast body,
+.a11y-high-contrast {
+  background: #FFFFFF;
+}
+.a11y-high-contrast .hc-surface {
+  @apply border-2 border-ink-900 shadow-none !important;
+}
+.a11y-high-contrast .hc-text-muted {
+  @apply text-ink-900 !important;
+}
+.a11y-high-contrast .hc-strong-border {
+  border-width: 2px !important;
+}
+
+/* Reduced motion: kill transitions/animations globally */
+.a11y-reduced-motion *,
+.a11y-reduced-motion *::before,
+.a11y-reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* ---------- Focus states ---------- */
+a, button, input, select, textarea, [tabindex] {
+  outline-offset: 2px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid #0E5C5C;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.a11y-high-contrast a:focus-visible,
+.a11y-high-contrast button:focus-visible,
+.a11y-high-contrast input:focus-visible,
+.a11y-high-contrast select:focus-visible,
+.a11y-high-contrast textarea:focus-visible,
+.a11y-high-contrast [tabindex]:focus-visible {
+  outline: 4px solid #000000;
+}
+
+/* Skip link */
+.skip-link {
+  @apply fixed left-3 -top-16 z-[100] bg-teal-900 text-white px-4 py-3 rounded-lg font-semibold;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* Tactile-paving signature motif used in AccessibilityScore */
+.paving-track {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3px;
+}
+.paving-dot {
+  width: 100%;
+  aspect-ratio: 1 / 1.6;
+  border-radius: 2px;
+  background: var(--dot-off, #E4EAE7);
+}
+.paving-dot[data-filled="true"] {
+  background: var(--dot-on, #0E5C5C);
+}
+
+/* Utility: visually hidden but screen-reader accessible */
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
